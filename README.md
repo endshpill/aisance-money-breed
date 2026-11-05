@@ -21,13 +21,29 @@ Open http://localhost:8080. Serve through HTTPS in production for native sharing
 
 ## Editing
 
-Questions and answer scores are in `questions`; breed thresholds and copy are in `breeds`. Total scores range from 0 to 24. Thresholds are 22 Border Collie, 18 Doberman, 14 German Shepherd, 10 Labrador, 6 Poodle, and 0 Husky.
+Questions are in `dist/styles-quiz.js`. Each question offers six equally weighted preferences, one for each breed. Most frequent preference wins; the most recent preference resolves ties. Display order rotates per question. This is an entertainment quiz, not a validated personality assessment or a financial-health score. Every breed can be reached regardless of income, savings or debt.
 
 `resultPanels` defines the six artwork regions in `dog-result-designs.png`, in the same order as `breeds`. `drawPoster()` adds the result name and generates the shareable PNG. The sharing panel provides native sharing where supported, a copyable quiz link, and an image download.
 
 ## App Store integration pending
 
-The “Meet your money assistant” button currently opens https://aisance.io/. An HTML TODO records the intended breed-specific App Store custom product pages. Approved App Store URLs and matching store assets are required before enabling those redirects. No store redirect has been activated.
+The result now leads to an illustrative conversation for that breed, followed by “Explore Aisance”, which still opens https://aisance.io/. The example is labelled as illustrative; no breed, answers or personalised plan is promised inside the app. Approved App Store and existing web-paywall URLs are still required. Do not treat the current CTA as either completed conversion variant.
+
+## Sharing and measurement
+
+Shared links include `?ref=<breed>` and the exported poster includes the same readable URL. Native image shares also include the URL in the message text. Shared links strip the original visitor's campaign tags. The final CTA preserves allowlisted UTM tags and the incoming referral tag.
+
+The browser emits `aisance:analytics` CustomEvents for quiz_view, quiz_start, quiz_answer (question number only), quiz_result, aha_view, share_open and outbound_click. These are integration hooks, not collected analytics. Connect an approved consent-aware adapter to a real analytics destination before campaign testing. No pixel ID, consent platform, purchase tracking, analytics endpoint or email collection is configured. Do not send answer choices or financial details to advertising platforms.
+
+## Launch decisions still needed
+
+- Competitor source and proof of paid-ad history: not supplied; treat this as an untested original concept.
+- Confirm primary objective, target country, traffic sources, creative owner and quantities. The revised questions use no currency amounts.
+- Supply approved breed-specific App Store URLs and existing web-paywall URLs, including activation-code and purchase attribution integration. Use the same campaign conditions for a revenue-per-visitor comparison once both paths are operational.
+- Suggested store direction: clearly labelled quiz-character introduction followed by actual app screens; never imply the app contains dogs or receives the breed. Apple submission/review is a separate task.
+- Supply aisance.website hosting access, analytics configuration and approved consent handling before migration. The ChatGPT-hosted version is a preview, not the campaign destination. This repository update does not update that preview.
+- Decide whether email collection is wanted. No email gate has been added.
+- Existing artwork is AI-generated concept material. Paid-use rights and applicable font licences have not been verified. Bitcoin imagery remains in the original assets: replace it in paid-ad versions before use. These assets are not cleared campaign deliverables.
 
 ## Deployment
 
