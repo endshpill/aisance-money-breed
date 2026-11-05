@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#00a69a" />
+  <title>What’s Your Money Breed? | Aisance</title>
+  <meta name="description" content="Eight real-life questions. One money breed. Find out who is running your bank account." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell" aria-live="polite">
+    <section id="intro" class="screen intro-screen active">
+      <header class="topbar">
+        <span class="brand">aisance</span>
+        <span class="mini-label">money instinct quiz</span>
+      </header>
+
+      <div class="hero-wrap">
+        <img class="hero-card" src="assets/money-breed-cast.png" alt="Six money-breed characters gathered in a stylish penthouse: Border Collie, Doberman, German Shepherd, Labrador, Poodle and Husky" />
+        <div class="hero-badge">8 real-life questions · 60 sec</div>
+      </div>
+
+      <div class="intro-copy">
+        <p class="eyebrow">Who is running your bank account?</p>
+        <h1>What’s your<br><em>Money Breed?</em></h1>
+        <p class="dek">From crypto Doberman to beautiful-chaos Husky. Be honest. Your banking app already knows.</p>
+        <button id="startButton" class="primary-button">Meet my money breed <span>→</span></button>
+      </div>
+    </section>
+
+    <section id="quiz" class="screen quiz-screen" aria-labelledby="questionTitle">
+      <header class="quiz-header">
+        <button id="backButton" class="icon-button" aria-label="Go back">←</button>
+        <div class="progress-track" aria-hidden="true"><div id="progressBar" class="progress-bar"></div></div>
+        <span id="progressText" class="progress-text">1/8</span>
+      </header>
+
+      <div class="question-stage">
+        <p id="questionKicker" class="question-kicker">REAL LIFE · 01</p>
+        <h2 id="questionTitle"></h2>
+        <p class="question-hint">Pick the answer that is actually true.</p>
+        <div id="answers" class="answers"></div>
+      </div>
+    </section>
+
+    <section id="result" class="screen result-screen" aria-labelledby="resultTitle">
+      <header class="topbar result-topbar">
+        <span class="brand">aisance</span>
+        <button id="restartTop" class="text-button">Retake</button>
+      </header>
+
+      <h2 id="resultTitle" class="sr-only"></h2>
+      <canvas id="resultCard" class="result-card" width="1080" height="1200" role="img" aria-label="Your Money Breed result poster"></canvas>
+      <div class="share-actions">
+        <button id="shareButton" class="primary-button">Share my breed ↗</button>
+        <button id="saveButton" class="secondary-button">Save image ↓</button>
+      </div>
+      <div id="sharePanel" class="share-panel" hidden>
+        <strong>Share your Money Breed</strong>
+        <p>Save your dog image, then send it with the quiz link.</p>
+        <button id="nativeShareButton" class="secondary-button" hidden>Share with an app ↗</button>
+        <label for="shareLink">Quiz link</label>
+        <div class="copy-row"><input id="shareLink" type="text" readonly aria-label="Quiz link"><button id="copyLinkButton" class="secondary-button">Copy link</button></div>
+        <button id="shareSaveButton" class="primary-button">Save my dog image ↓</button>
+      </div>
+      <p id="actionMessage" class="action-message" role="status"></p>
+      <div class="result-copy">
+        <div class="insight-grid">
+          <article><span>YOUR SUPERPOWER</span><strong id="resultPower"></strong></article>
+          <article><span>YOUR PLOT TWIST</span><strong id="resultWatch"></strong></article>
+        </div>
+        <p id="resultBody" class="result-body"></p>
+        <!-- TODO: Route this CTA to the Aisance App Store custom product page for the
+             visitor's result breed. Supply approved URLs for Border Collie, Doberman,
+             German Shepherd, Labrador, Poodle and Husky. Each custom page needs matching
+             dog-themed store screenshots. Do not activate until URLs and assets are approved.
+             Current aisance.io destination intentionally retained. -->
+        <a href="https://aisance.io/" class="primary-button dark">Meet your money assistant <span>→</span></a>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
