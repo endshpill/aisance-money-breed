@@ -43,7 +43,7 @@ The browser emits `aisance:analytics` CustomEvents for quiz_view, quiz_start, qu
 - Suggested store direction: clearly labelled quiz-character introduction followed by actual app screens; never imply the app contains dogs or receives the breed. Apple submission/review is a separate task.
 - Supply aisance.website hosting access, analytics configuration and approved consent handling before migration. The ChatGPT-hosted version is a preview, not the campaign destination. This repository update does not update that preview.
 - Decide whether email collection is wanted. No email gate has been added.
-- Existing artwork is AI-generated concept material. Paid-use rights and applicable font licences have not been verified. Bitcoin imagery remains in the original assets: replace it in paid-ad versions before use. These assets are not cleared campaign deliverables.
+- Existing artwork is AI-generated concept material. Bitcoin symbols have been removed from the group portrait, Doberman card and result artwork. Paid-use rights and applicable font licences have not been verified. These assets are not cleared campaign deliverables.
 
 ## Deployment
 
